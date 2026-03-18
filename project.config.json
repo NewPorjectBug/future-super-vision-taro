@@ -1,0 +1,14 @@
+{
+  "miniprogramRoot": "dist",
+  "projectname": "future-super-vision-taro-real",
+  "description": "未来超级展望师",
+  "appid": "touristappid",
+  "setting": {
+    "urlCheck": false,
+    "es6": true,
+    "enhance": true,
+    "postcss": true,
+    "minified": true
+  },
+  "compileType": "miniprogram"
+}

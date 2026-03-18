@@ -1,0 +1,146 @@
+.form-page {
+  .header-card,
+  .field-card,
+  .privacy-card {
+    padding: 28rpx;
+    margin-bottom: 18rpx;
+  }
+
+  .header-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 16rpx;
+    align-items: flex-start;
+  }
+
+  .header-small {
+    font-size: 22rpx;
+    letter-spacing: 4rpx;
+    color: rgba(255, 246, 228, 0.46);
+  }
+
+  .header-title {
+    margin-top: 10rpx;
+    font-size: 44rpx;
+    font-weight: 700;
+    color: #f7e7bf;
+  }
+
+  .header-chip {
+    padding: 10rpx 18rpx;
+    border-radius: 999rpx;
+    background: rgba(245, 216, 153, 0.1);
+    border: 1rpx solid rgba(245, 216, 153, 0.14);
+    color: #f5dfb0;
+    font-size: 22rpx;
+  }
+
+  .header-desc {
+    display: block;
+    margin-top: 18rpx;
+    font-size: 24rpx;
+    line-height: 1.8;
+    color: rgba(255, 244, 220, 0.68);
+  }
+
+  .field-label {
+    font-size: 24rpx;
+    color: #f5dfb0;
+    margin-bottom: 16rpx;
+  }
+
+  .field-input,
+  .picker-box {
+    min-height: 88rpx;
+    padding: 0 24rpx;
+    border-radius: 22rpx;
+    background: rgba(0, 0, 0, 0.14);
+    border: 1rpx solid rgba(255, 255, 255, 0.08);
+    display: flex;
+    align-items: center;
+    font-size: 28rpx;
+    color: #fff2cf;
+  }
+
+  .field-placeholder,
+  .picker-placeholder {
+    color: rgba(255, 244, 220, 0.42);
+    font-size: 28rpx;
+  }
+
+  .picker-box {
+    justify-content: space-between;
+  }
+
+  .picker-value {
+    font-size: 28rpx;
+    color: #fff2cf;
+  }
+
+  .picker-arrow {
+    font-size: 20rpx;
+    color: rgba(255, 244, 220, 0.42);
+  }
+
+  .gender-row {
+    display: flex;
+    gap: 14rpx;
+  }
+
+  .gender-item {
+    flex: 1;
+    height: 82rpx;
+    border-radius: 22rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26rpx;
+    color: rgba(255, 244, 220, 0.62);
+    background: rgba(0, 0, 0, 0.14);
+    border: 1rpx solid rgba(255, 255, 255, 0.08);
+  }
+
+  .gender-item--active {
+    color: #f5dfb0;
+    background: rgba(245, 216, 153, 0.1);
+    border-color: rgba(245, 216, 153, 0.22);
+  }
+
+  .focus-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14rpx;
+  }
+
+  .focus-item {
+    padding: 14rpx 24rpx;
+    border-radius: 999rpx;
+    background: rgba(0, 0, 0, 0.14);
+    border: 1rpx solid rgba(255, 255, 255, 0.08);
+    font-size: 24rpx;
+    color: rgba(255, 244, 220, 0.62);
+  }
+
+  .focus-item--active {
+    background: rgba(245, 216, 153, 0.1);
+    border-color: rgba(245, 216, 153, 0.22);
+    color: #f5dfb0;
+  }
+
+  .privacy-text {
+    display: block;
+    font-size: 22rpx;
+    line-height: 1.8;
+    color: rgba(255, 244, 220, 0.58);
+  }
+
+  .form-submit-btn {
+    margin-top: 12rpx;
+  }
+
+  .form-footer {
+    margin-top: 14rpx;
+    text-align: center;
+    font-size: 22rpx;
+  }
+}
