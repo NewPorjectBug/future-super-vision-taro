@@ -1,7 +1,7 @@
 import { Button, Input, Picker, Text, View } from '@tarojs/components'
 import Taro from '@tarojs/taro'
 import { useMemo, useState } from 'react'
-import { buildMockResult } from '../../services/mock'
+import { apiRequest } from '../../services/api'
 import type { FormData } from '../../types'
 import './index.scss'
 
@@ -20,7 +20,7 @@ export default function FormPage() {
 
   const focusLabel = useMemo(() => focusOptions.find((item) => item.value === focus)?.label ?? '事业成长', [focus])
 
-  const submit = () => {
+  const submit = async () => {
     if (!nickname.trim()) {
       Taro.showToast({ title: '请先填写昵称', icon: 'none' })
       return
@@ -36,9 +36,39 @@ export default function FormPage() {
       gender,
       focus,
     }
+
     Taro.setStorageSync('fsv_form', payload)
-    Taro.setStorageSync('fsv_result', buildMockResult(payload))
-    Taro.navigateTo({ url: '/pages/result/index' })
+
+    try {
+      Taro.showLoading({ title: '生成中...' })
+      const result = await apiRequest('/fortune', {
+        method: 'POST',
+        data: payload
+      })
+
+      if (result) {
+        Taro.setStorageSync('fsv_result', result)
+        Taro.showToast({ title: '生成成功', icon: 'success' })
+        Taro.navigateTo({ url: '/pages/result/index' })
+        return
+      }
+
+      throw new Error('结果为空')
+    } catch (error) {
+      console.error('fortune call failed', error)
+      Taro.showToast({ title: (error as any)?.message || '生成失败，请重试', icon: 'none' })
+      Taro.setStorageSync('fsv_result', {
+        keyword: '藏锋待时',
+        title: '专属趋势参考',
+        summary: '当前阶段适合稳中求进，优先处理真正重要的事。',
+        tags: ['稳中求进', '聚焦核心'],
+        trendText: '建议先解决最关键的问题，本周以稳定为主。',
+        suggestions: ['优先处理最重要的一件事', '避免分散精力', '适度复盘本周计划']
+      })
+      Taro.navigateTo({ url: '/pages/result/index' })
+    } finally {
+      Taro.hideLoading()
+    }
   }
 
   return (

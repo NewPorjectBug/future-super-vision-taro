@@ -6,7 +6,9 @@
     "dev:weapp": "taro build --type weapp --watch",
     "dev:h5": "taro build --type h5 --watch",
     "build:weapp": "taro build --type weapp",
-    "build:h5": "taro build --type h5"
+    "build:h5": "taro build --type h5",
+    "build:test": "set API_ENV=test&& set VITE_API_ENV=test&& npm run build:h5",
+    "build:prod": "set API_ENV=production&& set VITE_API_ENV=production&& npm run build:h5"
   },
   "dependencies": {
     "@tarojs/components": "4.1.11",

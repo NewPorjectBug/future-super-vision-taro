@@ -2,7 +2,7 @@
   "miniprogramRoot": "dist",
   "projectname": "future-super-vision-taro-real",
   "description": "未来超级展望师",
-  "appid": "touristappid",
+  "appid": "wx016d509d90e27860",
   "setting": {
     "urlCheck": false,
     "es6": true,

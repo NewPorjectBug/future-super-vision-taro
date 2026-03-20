@@ -1,0 +1,49 @@
+.simple-page {
+  min-height: 100vh;
+  padding: 20px 16px 28px;
+  box-sizing: border-box;
+  background:
+    radial-gradient(circle at top, rgba(214, 177, 92, 0.12), transparent 35%),
+    linear-gradient(180deg, #0d111c 0%, #11182a 45%, #191225 100%);
+}
+
+.simple-title {
+  max-width: 680px;
+  margin: 0 auto 14px;
+  font-size: 24px;
+  font-weight: 700;
+  color: #f6e6bf;
+}
+
+.simple-card {
+  max-width: 680px;
+  margin: 0 auto 14px;
+  padding: 18px 16px;
+  border-radius: 22px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,220,150,0.12);
+  box-shadow: 0 20px 42px rgba(0,0,0,0.24);
+  box-sizing: border-box;
+}
+
+.simple-date {
+  display: block;
+  font-size: 12px;
+  color: rgba(255, 246, 228, 0.52);
+}
+
+.simple-keyword {
+  display: block;
+  margin-top: 8px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #f5d28b;
+}
+
+.simple-summary {
+  display: block;
+  margin-top: 10px;
+  font-size: 13px;
+  line-height: 1.8;
+  color: rgba(255, 244, 221, 0.7);
+}

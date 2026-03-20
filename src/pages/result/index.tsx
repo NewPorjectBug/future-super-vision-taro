@@ -1,19 +1,20 @@
 import { Button, Text, View } from '@tarojs/components'
 import Taro, { useDidShow } from '@tarojs/taro'
 import { useState } from 'react'
-import { buildMockResult } from '../../services/mock'
 import type { FormData, ResultData } from '../../types'
 import './index.scss'
 
-const fallbackForm: FormData = {
-  nickname: '你',
-  birthDate: '1998-01-01',
-  gender: 'secret',
-  focus: 'career',
+const fallbackResult: ResultData = {
+  keyword: '藏锋待时',
+  title: '专属趋势参考',
+  summary: '当前阶段适合稳中求进，优先处理真正重要的事。',
+  tags: ['稳中求进', '聚焦核心'],
+  trendText: '建议先解决最关键的问题，本周以稳定为主。',
+  suggestions: ['优先处理最重要的一件事', '避免分散精力', '适度复盘本周计划']
 }
 
 export default function ResultPage() {
-  const [result, setResult] = useState<ResultData>(() => buildMockResult(fallbackForm))
+  const [result, setResult] = useState<ResultData>(fallbackResult)
   const [nickname, setNickname] = useState('你')
 
   useDidShow(() => {
